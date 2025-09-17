@@ -1,0 +1,24 @@
+const fs = require('fs');
+const dns = require('dns')
+const path = `./domains.txt`;
+
+
+const resolve = (domain) => {
+    dns.resolve(domain, () => {
+        
+    })
+}
+
+
+
+fs.readFile(path, 'utf8', (err, data) => {
+    try {
+        let res = data.split('\r\n');
+        for (let i = 0;i < res.length;i++){
+            resolve(res[i], )
+        }
+        
+    } catch (error) {
+        console.log('errorr')
+    }
+})
